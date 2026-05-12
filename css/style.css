@@ -97,12 +97,26 @@ a   { text-decoration: none; color: inherit; }
 ══════════════════════════════════════════════ */
 .bg-watercolor {
   
+  /* ══ CLAUDE ORIGINAL SE VE FEO CORTADO ══
+
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  background-color: var(--cream); /* fallback */
+  background-color: var(--cream); */
+
+  /* ══ COPILOT ARREGLADO ══*/
+
+  margin: 0;
+  font-family: var(--font-body);
+  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('../img/fondo-textura.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
 }
 
 .section {
@@ -161,6 +175,20 @@ a   { text-decoration: none; color: inherit; }
   visibility: hidden;
 }
 
+
+#envelope-img {
+  width: min(320px, 85vw);
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+}
+
+#envelope-wrapper.opening #envelope-img {
+  transform: scale(1.05) translateY(-20px);
+  opacity: 0;
+}
+
+
 #envelope-wrapper {
   display: flex;
   flex-direction: column;
@@ -175,8 +203,6 @@ a   { text-decoration: none; color: inherit; }
   50%       { transform: translateY(-12px); }
 }
 
-#envelope-wrapper.opening { animation: none; }
-
 /* El sobre */
 #envelope {
   position: relative;
@@ -185,6 +211,7 @@ a   { text-decoration: none; color: inherit; }
   filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
   transform-style: preserve-3d;
   perspective: 1200px;
+  display: none;
 }
 
 /* Cuerpo del sobre */
@@ -199,7 +226,7 @@ a   { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 
-/* Si NO tienes imagen del sobre, se usa este estilo CSS puro: */
+/* Si NO tienes imagen del sobre, se usa este estilo CSS puro:
 #env-body::before {
   content: '';
   position: absolute;
@@ -210,7 +237,7 @@ a   { text-decoration: none; color: inherit; }
   background-size: 50% 100%;
   background-repeat: no-repeat;
   opacity: 0.6;
-}
+} 
 
 /* Solapa superior */
 #env-flap {
@@ -266,7 +293,7 @@ a   { text-decoration: none; color: inherit; }
   margin-top: 0.5rem;
   letter-spacing: 0.05em;
   animation: blink 2.2s ease-in-out infinite;
-}
+} */
 
 @keyframes blink {
   0%, 100% { opacity: 0.35; }
@@ -310,10 +337,13 @@ a   { text-decoration: none; color: inherit; }
 }
 
 .hero-img {
+  
   width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  max-height: 70vh;  
+  object-fit: contain;       
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -426,7 +456,8 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  /*gap: 1.5rem;*/
+  gap: 10px;
 }
 
 .venue-img-wrap {
@@ -443,12 +474,14 @@ a   { text-decoration: none; color: inherit; }
 /* Pin dorado */
 .pin-link {
   display: inline-block;
+  margin-top: 8px;
   transition: transform 0.2s ease;
 }
 .pin-link:hover { transform: scale(1.1); }
 
 .pin-icon {
-  width: clamp(48px, 8vw, 72px);
+  width: 50px;
+  margin-top: 10px;
   height: auto;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 }
