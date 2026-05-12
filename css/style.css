@@ -97,7 +97,7 @@ a   { text-decoration: none; color: inherit; }
 ══════════════════════════════════════════════ */
 .bg-watercolor {
   
-  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle, #f8f5ef, #f2eee7);
+  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-repeat: repeat;
   background-size: cover;
@@ -146,7 +146,7 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle, #f8f5ef, #f2eee7);
+  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-repeat: repeat;
   background-size: cover;
@@ -295,7 +295,7 @@ a   { text-decoration: none; color: inherit; }
 
 .hero-img {
   width: 100%;
-  max-height: 92vh;
+  height: 92vh;
   object-fit: cover;
   object-position: center top;
 } */
@@ -311,9 +311,11 @@ a   { text-decoration: none; color: inherit; }
 
 .hero-img {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   object-fit: cover;
+  object-position: center top;
 }
+
 
 .hero-text {
   position: absolute;
@@ -321,16 +323,18 @@ a   { text-decoration: none; color: inherit; }
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #8B1A1A;
+  color: #ffffff; 
+  text-shadow: 
+    0 2px 8px rgba(0,0,0,0.6),
+    0 4px 20px rgba(0,0,0,0.4);
 }
 
 .hero-text h1 {
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-family: var(--font-title);
+  font-size: clamp(3rem, 9vw, 5.5rem);
 }
 
 .hero-text p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 2px;
 }
 
@@ -495,4 +499,53 @@ form-btn-wrap {
 .pluma-icon {
   width: 40px;
   height: auto;
+}
+
+/* ══════════════════════════════════════════════
+   6. INFORMACION DE LA BODA
+══════════════════════════════════════════════ */
+
+.gallery-three {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-three img {
+  width: 30%;
+  max-width: 180px;
+  border-radius: 10px;
+}
+
+/* ══════════════════════════════════════════════
+  CONTADOR
+══════════════════════════════════════════════ */
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.countdown-block {
+  background: rgba(139, 111, 71, 0.85);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.cd-num {
+  font-size: 2.8rem;
+  display: block;
+  font-weight: bold;
+}
+
+.cd-label {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
