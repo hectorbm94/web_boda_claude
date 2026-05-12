@@ -94,7 +94,7 @@ a   { text-decoration: none; color: inherit; }
    Usa tu imagen de fondo en todas las secciones
 ══════════════════════════════════════════════ */
 .bg-watercolor {
-  background-image: url('../img/fondo-acuarela.png');
+  background-image: url('../img/fondo-textura.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -116,7 +116,7 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/fondo-acuarela.png');
+  background-image: url('../img/fondo-textura.jpg');
   background-size: cover;
   background-position: center;
   background-color: var(--cream);
