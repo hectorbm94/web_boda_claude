@@ -31,8 +31,8 @@
      Cuando tengas las fuentes locales, sustituye
      'Great Vibes' → 'NewIconScript'
      'Dancing Script' → 'Nickainley'             */
-  --font-title: 'NewIconScript', 'Great Vibes', cursive;
-  --font-body:  'Nickainley', 'Dancing Script', cursive;
+  --font-title: 'Great Vibes', cursive;
+  --font-body:  'Libre Baskerville', serif;
 }
 
 /* ══════════════════════════════════════════════
@@ -44,6 +44,7 @@ body {
   background: var(--cream);
   color: var(--dark);
   font-family: var(--font-body);
+  letter-spacing: 0.3px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -56,6 +57,7 @@ a   { text-decoration: none; color: inherit; }
 .title-script {
   font-family: var(--font-title);
   font-weight: normal;
+  letter-spacing: 1px;
   line-height: 1.1;
 }
 
@@ -94,10 +96,12 @@ a   { text-decoration: none; color: inherit; }
    Usa tu imagen de fondo en todas las secciones
 ══════════════════════════════════════════════ */
 .bg-watercolor {
-  background-image: url('../img/fondo-textura.jpg');
+  
+  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle, #f8f5ef, #f2eee7);
+  background-blend-mode: multiply;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--cream); /* fallback */
 }
 
@@ -105,6 +109,32 @@ a   { text-decoration: none; color: inherit; }
   padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 5rem);
   text-align: center;
 }
+
+/* ══════════════════════════════════════════════
+   TARJETA SALE DEL SOBRE
+══════════════════════════════════════════════ */
+
+#invitation-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) scale(0.8);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+#invitation-card.show {
+  transform: translate(-50%, -20%) scale(1);
+  opacity: 1;
+}
+
+.card-inner {
+  background: rgba(255,255,255,0.85);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
 
 /* ══════════════════════════════════════════════
    SOBRE — PANTALLA DE APERTURA
@@ -116,7 +146,9 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/fondo-textura.jpg');
+  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle, #f8f5ef, #f2eee7);
+  background-blend-mode: multiply;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   background-color: var(--cream);
@@ -255,10 +287,9 @@ a   { text-decoration: none; color: inherit; }
 
 /* ══════════════════════════════════════════════
    1. HERO
-══════════════════════════════════════════════ */
+══════════════════════════════════════════════ 
 #hero {
   width: 100%;
-  /* La imagen acuarela ocupa todo el ancho sin padding */
   line-height: 0;
 }
 
@@ -267,7 +298,42 @@ a   { text-decoration: none; color: inherit; }
   max-height: 92vh;
   object-fit: cover;
   object-position: center top;
+} */
+
+
+#hero {
+  position: relative;
 }
+
+.hero-inner {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #8B1A1A;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-family: var(--font-title);
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
 
 /* ══════════════════════════════════════════════
    2. FECHA — ¡Nos casamos!
@@ -396,8 +462,7 @@ a   { text-decoration: none; color: inherit; }
   gap: 1.5rem;
 }
 
-/* Botón estilo píldora verde salvia */
-.form-btn-wrap {
+/* .form-btn-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,4 +474,25 @@ a   { text-decoration: none; color: inherit; }
   display: inline-block;
   background: var(--sage);
   color: #fff;
-  font-family: var(--font-
+  font-family: var(--font- */
+
+
+form-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-form {
+  padding: 14px 28px;
+  background: var(--sage);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.1rem;
+}
+
+.pluma-icon {
+  width: 40px;
+  height: auto;
+}

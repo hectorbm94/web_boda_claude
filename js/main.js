@@ -5,7 +5,28 @@ const envelopeScreen = document.getElementById('envelope-screen');
 const envelopeWrapper = document.getElementById('envelope-wrapper');
 const mainContent     = document.getElementById('main-content');
 
+/* COPILOT CORREGIDO */
+
+const card = document.getElementById('invitation-card');
+
 function openEnvelope() {
+  envelopeWrapper.classList.add('opening');
+
+  setTimeout(() => {
+    card.classList.remove('hidden');
+    card.classList.add('show');
+
+    setTimeout(() => {
+      mainContent.classList.remove('hidden');
+      envelopeScreen.classList.add('fade-out');
+    }, 1000);
+
+  }, 500);
+}
+
+/* CLAUDE */
+
+/* function openEnvelope() {
   // 1. Animar el sobre
   envelopeWrapper.classList.add('opening');
 
@@ -25,7 +46,7 @@ function openEnvelope() {
       );
     }, 400);
   }, 700);
-}
+} */
 
 envelopeWrapper.addEventListener('click',     openEnvelope);
 envelopeWrapper.addEventListener('touchstart', openEnvelope, { passive: true });
