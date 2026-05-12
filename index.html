@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magdalena & Héctor · 12·12·2026</title>
+
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600;700&display=swap)" rel="stylesheet" />
+
+  <!--
+    TIPOGRAFÍAS LOCALES:
+    Descomenta en style.css los @font-face cuando tengas:
+      /fonts/NewIconScript.woff2   → títulos rojos grandes
+      /fonts/Nickainley.woff2      → cuerpo de texto en script fino
+  -->
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       SOBRE — PANTALLA DE APERTURA
+  ═══════════════════════════════════════ -->
+  <div id="envelope-screen">
+    <div id="envelope-wrapper">
+      <div id="envelope">
+        <div id="env-flap"></div>
+        <div id="env-body">
+          <div id="env-content">
+            <p class="env-names">Magdalena &amp; Héctor</p>
+            <p class="env-date">12 · 12 · 2026</p>
+            <p class="env-hint">Toca para abrir tu invitación</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ═══════════════════════════════════════ -->
+  <main id="main-content" class="hidden">
+
+    <!-- 1. HERO — FOTO ACUARELA PAREJA -->
+    <section id="hero">
+      <img src="img/header-acuarela.png" alt="Ilustración acuarela de Magdalena y Héctor" class="hero-img" />
+    </section>
+
+    <!-- 2. ¡NOS CASAMOS! — FECHA -->
+    <section id="fecha" class="section bg-watercolor">
+      <h1 class="title-script red">¡Nos casamos!</h1>
+      <div class="fecha-grid">
+        <div class="fecha-month script-dark">Diciembre</div>
+        <div class="fecha-row">
+          <div class="fecha-col">
+            <div class="fecha-line"></div>
+            <span class="fecha-item bold">Sábado</span>
+            <div class="fecha-line"></div>
+          </div>
+          <div class="fecha-col fecha-col--center">
+            <span class="fecha-item script-dark">12</span>
+          </div>
+          <div class="fecha-col">
+            <div class="fecha-line"></div>
+            <span class="fecha-item bold">12:00h</span>
+            <div class="fecha-line"></div>
+          </div>
+        </div>
+        <div class="fecha-year script-dark">2026</div>
+      </div>
+    </section>
+
+    <!-- 3. LA CEREMONIA Y CELEBRACIÓN -->
+    <section id="ceremonia" class="section bg-watercolor">
+      <h2 class="title-script red">La ceremonia y celebración</h2>
+      <div class="venue-layout">
+        <div class="venue-text">
+          <p class="body-script">
+            La ceremonia tendrá lugar en la<br />
+            Real Parroquia de Santa María Magdalena<br />
+            a las 12:00h
+          </p>
+          <a href="[maps.google.com](https://maps.google.com/?q=Real+Parroquia+Santa+Maria+Magdalena+Sevilla)"
+             target="_blank" rel="noopener" class="pin-link" aria-label="Ver en Google Maps">
+            <img src="img/icono-pin.png" alt="Ver ubicación" class="pin-icon" />
+          </a>
+        </div>
+        <div class="venue-img-wrap">
+          <img src="img/acuarela-iglesia.png" alt="Real Parroquia de Santa María Magdalena" class="venue-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HACIENDA -->
+    <section id="hacienda" class="section bg-watercolor">
+      <div class="venue-layout">
+        <div class="venue-text">
+          <p class="body-script">
+            Posteriormente nos encantaría que nos<br />
+            acompañáseis a celebrar por todo lo alto nuestro<br />
+            enlace en la<br />
+            Hacienda de Los Parrales en Sanlúcar la Mayor
+          </p>
+          <a href="[maps.google.com](https://maps.google.com/?q=Hacienda+de+Los+Parrales+Sanlucar+la+Mayor)"
+             target="_blank" rel="noopener" class="pin-link" aria-label="Ver en Google Maps">
+            <img src="img/icono-pin.png" alt="Ver ubicación" class="pin-icon" />
+          </a>
+        </div>
+        <div class="venue-img-wrap">
+          <img src="img/acuarela-hacienda.png" alt="Hacienda de Los Parrales" class="venue-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ASISTENCIA -->
+    <section id="asistencia" class="section bg-watercolor">
+      <h2 class="title-script red">Asistencia</h2>
+      <div class="asistencia-text">
+        <p class="body-script">
+          ¡Se acerca nuestro gran día y queremos vivirlo contigo!<br />
+          Será una celebración llena de ilusión, momentos especiales y mucha alegría.<br />
+          Porque no sería lo mismo sin ti a nuestro lado.
+        </p>
+        <p class="body-script">
+          <u>Solo adultos.</u> Aunque adoramos a los más pequeños, hemos decidido que
+          nuestra boda sea una celebración para adultos. Sabemos que para muchas
+          familias puede requerir un poco más de organización, y os agradecemos
+          muchísimo vuestra comprensión. Nuestra ilusión es que todos podáis
+          relajaros, desconectar y disfrutar al máximo con nosotros.
+        </p>
+        <p class="body-script">
+          Confírmanos si podrás venir...<br />
+          ¡y ven con ganas de pasarlo increíble!
+        </p>
+      </div>
+      <div class="form-btn-wrap">
+        <a href="[forms.gle](https://forms.gle/TU_ENLACE_AQUI)" target="_blank" rel="noopener" class="btn-form">
+          Rellena el cuestionario aquí
+        </a>
+        <img src="img/icono-pluma.png" alt="" class="pluma-icon" aria-hidden="true" />
+      </div>
+    </section>
+
+    <!-- 6. INFORMACIÓN DE LA BODA -->
+    <section id="info" class="section bg-watercolor">
+      <h2 class="title-script red">Información de la boda</h2>
+
+      <h3 class="subtitle-script">Dress Code</h3>
+      <div class="info-text">
+        <p class="body-script">
+          Queremos veros guapísimos, elegantes... y listos para darlo todo en la pista.<br />
+          Así que el dress code será formal.
+        </p>
+        <p class="body-script">
+          Para las invitadas: dejad los vestidos largos para la alfombra roja y evitad
+          tonos blancos, marfil o muy claritos (¡están reservados para la novia!)
+        </p>
+        <p class="body-script">
+          Para los invitados: traje formal. Y sí, el "me pongo una camisa bonita y ya"
+          no cuenta.
+        </p>
+      </div>
+
+      <!-- Galería de 3 fotos -->
+      <div class="gallery-three">
+        <img src="img/foto-pareja-1.png" alt="Magdalena y Héctor" />
+        <img src="img/foto-pareja-2.png" alt="Magdalena y Héctor" />
+        <img src="img/foto-pareja-3.png" alt="Magdalena y Héctor" />
+      </div>
+
+      <!-- Alojamiento -->
+      <h3 class="subtitle-script red" style="text-align:right; margin-top: 2rem;">Alojamiento</h3>
+      <div class="info-text">
+        <p class="body-script">
+          Agradecemos enormemente el esfuerzo de aquellos que venís de fuera de
+          Sevilla para disfrutar con nosotros, por ello, os dejamos algunas
+          recomendaciones de alojamiento cercano a la hacienda.
+        </p>
+        <!-- Añade aquí las recomendaciones de hoteles que quieras -->
+      </div>
+    </section>
+
+    <!-- 7. REGALO -->
+<section id="regalo" class="section bg-watercolor">
+  <h2 class="title-script red">El regalo</h2>
+  <div class="asistencia-text">
+    <p class="body-script">
+      Sin vosotros esto no sería igual. Gracias por vuestra compañía en esta
+      nueva etapa que comenzamos. El regalo es opcional, la asistencia
+      obligatoria. Pero si queréis tener un detalle con nosotros os facilitamos
+      nuestro número de cuenta.
+    </p>
+  </div>
+  <div class="iban-box body-script">
+    <p>ES09 0049 5450 0229</p>
+  </div>
+</section>
+
+<!-- 8. CUENTA ATRÁS (al final, antes del footer) -->
+<section id="countdown" class="section bg-watercolor">
+  <h2 class="title-script red">Faltan...</h2>
+  <div class="countdown-grid">
+    <div class="countdown-block">
+      <span id="cd-days" class="cd-num">--</span>
+      <span class="cd-label">días</span>
+    </div>
+    <div class="countdown-block">
+      <span id="cd-hours" class="cd-num">--</span>
+      <span class="cd-label">horas</span>
+    </div>
+    <div class="countdown-block">
+      <span id="cd-min" class="cd-num">--</span>
+      <span class="cd-label">minutos</span>
+    </div>
+    <div class="countdown-block">
+      <span id="cd-sec" class="cd-num">--</span>
+      <span class="cd-label">segundos</span>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <p class="title-script red footer-names">Magdalena &amp; Héctor</p>
+      <p class="footer-date">12 · 12 · 2026 · Sevilla</p>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
