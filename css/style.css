@@ -176,6 +176,12 @@ body::before {
   background: url('../img/fondo-textura.jpg') repeat;
 }
 
+
+#envelope-screen.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
 /* CONTENEDOR */
 #envelope-wrapper {
   position: relative;
@@ -230,16 +236,21 @@ body::before {
 }
 
 /* ESTADO ABIERTO */
+
 #envelope-wrapper.open #envelope-img {
   animation: none;
-  transform: scale(1.08) translateY(-10px);
+  transform: translateY(-30px) scale(1.05);
+  opacity: 0;
+  filter: blur(4px);
+  transition: 
+    transform 0.8s ease,
+    opacity 0.6s ease,
+    filter 0.8s ease;
 }
-
 
 #envelope-img:active {
   transform: scale(0.9);
 }
-
 
 #envelope-wrapper.open #card {  
   opacity: 1;
@@ -263,13 +274,18 @@ body::before {
 /* ══════════════════════════════════════════════
    CONTENIDO PRINCIPAL
 ══════════════════════════════════════════════ */
-#main-content {
-  opacity: 1;
-  transition: opacity 0.9s ease;
-  position: relative;
-  z-index: 1;
 
+#main-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.9s ease;
 }
+
+#main-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #main-content.hidden {
   opacity: 0;
   pointer-events: none;
@@ -394,6 +410,78 @@ body::before {
   font-size: clamp(1.6rem, 5vw, 3rem);
   margin-top: 0.25rem;
 }
+
+/* ══════════════════════════════════════════════
+   BIENVENIDA y GALERIA
+══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  .bienvenida-layout {
+    flex-direction: column;
+  }
+
+  .bienvenida-gallery {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .bienvenida-gallery img {
+    width: 90px;
+  }
+}
+
+.bienvenida-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.bienvenida-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bienvenida-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.bienvenida-texto {
+  max-width: 600px;
+  text-align: center;
+}
+
+.bienvenida-texto h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.bienvenida-texto p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#bienvenida {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+#bienvenida.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ══════════════════════════════════════════════
    3-4. CEREMONIA Y HACIENDA — layout imagen+texto
