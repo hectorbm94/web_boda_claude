@@ -178,14 +178,17 @@ body::before {
 
 /* CONTENEDOR */
 #envelope-wrapper {
-  position: relative;
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   -webkit-tap-highlight-color: transparent;
 }
 
 /* SOBRE */
 #envelope-img {
-  width: min(420px, 90vw);
+  width: min(520px, 92vw);
   position: relative;
   z-index: 2;
   cursor: pointer;
@@ -608,11 +611,19 @@ body::before {
 
 
 .countdown-clean {
-  display: flex;
+  
+  /*display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: nowrap;
+  margin-top: 30px;*/
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin-top: 30px;
+  text-align: center;
+
 }
 
 /* CONTENEDOR INDIVIDUAL */
@@ -624,7 +635,7 @@ body::before {
 .cd-num {
   display: block;
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-size: clamp(1.8rem, 5vw, 3rem);
   color: var(--red);
   line-height: 1;
 }
@@ -632,8 +643,8 @@ body::before {
 /* TEXTO */
 .cd-label {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.7;
 }
