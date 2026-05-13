@@ -95,16 +95,26 @@ a   { text-decoration: none; color: inherit; }
    FONDO ACUARELA — SECCIONES
    Usa tu imagen de fondo en todas las secciones
 ══════════════════════════════════════════════ */
+
 .bg-watercolor {
   
   /* ══ CLAUDE ORIGINAL ══ */
 
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
   background-color: var(--cream);
+}
+
+bg-watercolor::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.5);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .section {
@@ -159,11 +169,12 @@ a   { text-decoration: none; color: inherit; }
 
 /* SOBRE */
 #envelope-img {
-  width: min(320px, 85vw);
+  width: min(420px, 90vw);
   position: relative;
   z-index: 2;
   cursor: pointer;
   transition: transform 0.6s ease;
+  animation: floatEnvelope 3s ease-in-out infinite;
 }
 
 /* TARJETA (oculta dentro) */
@@ -212,6 +223,19 @@ a   { text-decoration: none; color: inherit; }
   opacity: 1;
   transform: translate(-50%, -80%);
 }
+
+@keyframes floatEnvelope {
+ 0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 
 /* ══════════════════════════════════════════════
