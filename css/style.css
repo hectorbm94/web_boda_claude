@@ -121,14 +121,15 @@ body::before {
 
 .bg-watercolor {
   
-  /* ══ CLAUDE ORIGINAL ══ */
-  background: transparent;
+  /* ══ CLAUDE ORIGINAL ══ 
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: top center;
-  background-color: var(--cream);
+  background-color: var(--cream); */
+  
+  background: transparent;
 }
 
 .section {
@@ -187,7 +188,7 @@ body::before {
   position: relative;
   z-index: 2;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
   animation: floatEnvelope 3s ease-in-out infinite;
 }
 
@@ -230,8 +231,8 @@ body::before {
 
 /* ESTADO ABIERTO */
 #envelope-wrapper.open #envelope-img {
-  transform: translateY(-20px) scale(0.92);
   animation: none;
+  transform: scale(1.08) translateY(-10px);
 }
 
 
@@ -529,3 +530,47 @@ body::before {
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
+
+
+.countdown-clean {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* CONTENEDOR INDIVIDUAL */
+.countdown-clean div {
+  text-align: center;
+}
+
+/* NÚMEROS */
+.cd-num {
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  color: var(--red);
+  line-height: 1;
+}
+
+/* TEXTO */
+.cd-label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+
+.countdown-clean div::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--red);
+  margin: 8px auto 0;
+  opacity: 0.4;
+}
+
