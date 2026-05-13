@@ -180,6 +180,7 @@ body::before {
 #envelope-wrapper {
   position: relative;
   text-align: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* SOBRE */
@@ -190,6 +191,7 @@ body::before {
   cursor: pointer;
   transition: transform 0.35s ease;
   animation: floatEnvelope 3s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* TARJETA (oculta dentro) */
