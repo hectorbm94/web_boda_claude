@@ -472,6 +472,10 @@ body::before {
 }
 
 #bienvenida {
+  border: 2px solid red;
+}
+
+/*#bienvenida {
   opacity: 0;
   transform: translateY(40px);
   transition: all 1s ease;
@@ -480,7 +484,7 @@ body::before {
 #bienvenida.visible {
   opacity: 1;
   transform: translateY(0);
-}
+}*/
 
 
 /* ══════════════════════════════════════════════
