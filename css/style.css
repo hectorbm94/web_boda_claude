@@ -97,24 +97,14 @@ a   { text-decoration: none; color: inherit; }
 ══════════════════════════════════════════════ */
 .bg-watercolor {
   
-  /* ══ CLAUDE ORIGINAL SE VE FEO CORTADO ══
+  /* ══ CLAUDE ORIGINAL ══ */
 
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  background-color: var(--cream); */
-
-  /* ══ COPILOT ARREGLADO ══*/
-
-  margin: 0;
-  font-family: var(--font-body);
-  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('../img/fondo-textura.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: var(--cream);
 
 
 }
@@ -125,7 +115,7 @@ a   { text-decoration: none; color: inherit; }
 }
 
 /* ══════════════════════════════════════════════
-   TARJETA SALE DEL SOBRE
+   TARJETA SALE DEL SOBRE - COPILOT
 ══════════════════════════════════════════════ */
 
 #invitation-card {
@@ -151,8 +141,8 @@ a   { text-decoration: none; color: inherit; }
 
 
 /* ══════════════════════════════════════════════
-   SOBRE — PANTALLA DE APERTURA
-══════════════════════════════════════════════ */
+   SOBRE — PANTALLA DE APERTURA - CLAUDE ORIGINAL
+══════════════════════════════════════════════
 #envelope-screen {
   position: fixed;
   inset: 0;
@@ -226,7 +216,6 @@ a   { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 
-/* Si NO tienes imagen del sobre, se usa este estilo CSS puro:
 #env-body::before {
   content: '';
   position: absolute;
@@ -298,7 +287,81 @@ a   { text-decoration: none; color: inherit; }
 @keyframes blink {
   0%, 100% { opacity: 0.35; }
   50%       { opacity: 0.75; }
+}*/
+
+/* ══════════════════════════════════════════════
+   SOBRE — PANTALLA DE APERTURA - COPILOT
+══════════════════════════════════════════════ */
+
+#envelope-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url('../img/fondo_textura.jpg') repeat;
 }
+
+/* CONTENEDOR */
+#envelope-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+/* SOBRE */
+#envelope-img {
+  width: min(320px, 85vw);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+/* TARJETA (oculta dentro) */
+#card {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 90%;
+  background: rgba(255,255,255,0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.8s ease;
+}
+
+/* TEXTO TARJETA */
+#card h1 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+#card p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* HINT */
+.env-hint {
+  margin-top: 15px;
+  opacity: 0.6;
+}
+
+/* ESTADO ABIERTO */
+#envelope-wrapper.open #envelope-img {
+  transform: translateY(-20px) scale(0.95);
+}
+
+#envelope-wrapper.open #card {
+  opacity: 1;
+  transform: translate(-50%, -40%);
+}
+
 
 /* ══════════════════════════════════════════════
    CONTENIDO PRINCIPAL

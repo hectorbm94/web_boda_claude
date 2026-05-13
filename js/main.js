@@ -7,21 +7,18 @@ const mainContent     = document.getElementById('main-content');
 
 /* COPILOT CORREGIDO */
 
-const card = document.getElementById('invitation-card');
 
 function openEnvelope() {
-  envelopeWrapper.classList.add('opening');
 
-  setTimeout(() => {
-    card.classList.remove('hidden');
-    card.classList.add('show');
+  envelopeWrapper.classList.add('open');
+
+  setTimeout(() =>Content.classList.remove('hidden');  setTimeout(() => {
 
     setTimeout(() => {
-      mainContent.classList.remove('hidden');
       envelopeScreen.classList.add('fade-out');
-    }, 1000);
+    }, 800);
 
-  }, 500);
+  }, 1200);
 }
 
 /* CLAUDE */
