@@ -10,11 +10,13 @@ const mainContent = document.getElementById("main-content");
 
 
 
+
 function openEnvelope() {
 
   envelopeWrapper.classList.add("open");
 
   setTimeout(() => {
+    mainContent.classList.remove("hidden");
     mainContent.classList.add("visible");
 
     envelopeScreen.classList.add("fade-out");
