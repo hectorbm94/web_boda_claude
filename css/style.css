@@ -44,9 +44,6 @@ body {
   background: var(--cream);
   color: var(--dark);
   font-family: var(--font-body);
-  font-size: 1.2rem;
-  line-height: 1.8;
-  letter-spacing: 0.3px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -427,7 +424,7 @@ body::before {
 .bienvenida-layout {
     display: grid;
     grid-template-columns: 90px 1fr;
-    gap: 15px;
+    gap: 12px;
     padding: 0 10px;
   }
 
@@ -449,28 +446,25 @@ body::before {
   }
 }
 
-
-.bienvenida-layout {  
-  
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 20px;
+.bienvenida-layout {   
+  display: grid; 
+  grid-template-columns: minmax(100px, 180px) 1fr;
+  gap: clamp(15px, 4vw, 40px);
   align-items: center;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-
 }
 
 .bienvenida-gallery {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-left: -20px;
+  gap: 12px;
+  align-items: center;
 }
 
 .bienvenida-gallery img {
-  width: 150px;
-  height: auto;
+  width: 100%;
+  max-width: 140px;
   border-radius: 8px;
 }
 
