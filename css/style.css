@@ -92,6 +92,29 @@ a   { text-decoration: none; color: inherit; }
 .bold { font-weight: 700; }
 
 /* ══════════════════════════════════════════════
+   FONDO ACUARELA EN EL BODY - MEJOR OPCION
+   Usa tu imagen de fondo en la web
+══════════════════════════════════════════════ */
+
+body {
+  position: relative;
+  background-image: url('../img/fondo-textura.jpg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.5);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* ══════════════════════════════════════════════
    FONDO ACUARELA — SECCIONES
    Usa tu imagen de fondo en todas las secciones
 ══════════════════════════════════════════════ */
@@ -99,22 +122,13 @@ a   { text-decoration: none; color: inherit; }
 .bg-watercolor {
   
   /* ══ CLAUDE ORIGINAL ══ */
-
+  background: transparent;
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
   background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: top center;
   background-color: var(--cream);
-}
-
-bg-watercolor::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.5);
-  pointer-events: none;
-  z-index: -1;
 }
 
 .section {
@@ -173,7 +187,7 @@ bg-watercolor::before {
   position: relative;
   z-index: 2;
   cursor: pointer;
-  transition: transform 0.6s ease;
+  transition: transform 0.3s ease;
   animation: floatEnvelope 3s ease-in-out infinite;
 }
 
@@ -216,8 +230,15 @@ bg-watercolor::before {
 
 /* ESTADO ABIERTO */
 #envelope-wrapper.open #envelope-img {
-  transform: translateY(-20px) scale(0.95);
+  transform: translateY(-20px) scale(0.92);
+  animation: none;
 }
+
+
+#envelope-img:active {
+  transform: scale(0.9);
+}
+
 
 #envelope-wrapper.open #card {  
   opacity: 1;
@@ -244,6 +265,9 @@ bg-watercolor::before {
 #main-content {
   opacity: 1;
   transition: opacity 0.9s ease;
+  position: relative;
+  z-index: 1;
+
 }
 #main-content.hidden {
   opacity: 0;

@@ -8,19 +8,21 @@ const envelopeWrapper = document.getElementById("envelope-wrapper");
 const envelopeScreen = document.getElementById("envelope-screen");
 const mainContent = document.getElementById("main-content");
 
+
 function openEnvelope() {
 
   envelopeWrapper.classList.add("open");
 
+  // pequeña pausa para ver el feedback
   setTimeout(() => {
+
     mainContent.classList.remove("hidden");
 
     setTimeout(() => {
       envelopeScreen.style.opacity = "0";
       envelopeScreen.style.pointerEvents = "none";
-    }, 800);
-
-  }, 1200);
+    }, 400);
+  }, 300);
 }
 
 envelopeWrapper.addEventListener("click", openEnvelope);
