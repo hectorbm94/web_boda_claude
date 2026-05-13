@@ -287,18 +287,7 @@ body::before {
 
 /* ══════════════════════════════════════════════
    1. HERO
-══════════════════════════════════════════════ 
-#hero {
-  width: 100%;
-  line-height: 0;
-}
-
-.hero-img {
-  width: 100%;
-  height: 92vh;
-  object-fit: cover;
-  object-position: center top;
-} */
+══════════════════════════════════════════════ */
 
 
 #hero {
@@ -310,13 +299,24 @@ body::before {
 }
 
 .hero-img {
-  
+ 
   width: 100%;
-  height: auto;
-  max-height: 70vh;  
-  object-fit: contain;       
-  display: block;
-  margin: 0 auto;
+  height: 75vh;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+@media (max-width: 768px) {
+
+  .hero-img {
+  
+    width: 100%;
+    height: auto;
+    max-height: 70vh;  
+    object-fit: contain;       
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 
@@ -333,7 +333,8 @@ body::before {
 }
 
 .hero-text h1 {
-  font-size: clamp(3rem, 9vw, 5.5rem);
+  /*font-size: clamp(3rem, 9vw, 5.5rem);  --ANTES DE FIX */
+  font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .hero-text p {
