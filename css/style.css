@@ -415,9 +415,16 @@ body::before {
    BIENVENIDA y GALERIA
 ══════════════════════════════════════════════ */
 
-.no-wrap {
-  white-space: nowrap;
+.bienvenida-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
+
+.bienvenida-header h2 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.1;
+}
+
 
 @media (max-width: 768px) {
 
@@ -443,6 +450,10 @@ body::before {
 
 .bienvenida-texto h2 {
     font-size: 2.2rem;
+  }
+
+.bienvenida-header h2 {
+    font-size: 2.4rem;
   }
 }
 
@@ -470,7 +481,7 @@ body::before {
 
 
 .bienvenida-texto {
-  max-width: 600px;
+  max-width: 650px;
   text-align: center;
   margin: 0 auto;
 }
