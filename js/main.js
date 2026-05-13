@@ -1,51 +1,29 @@
 /* ═══════════════════════════════════════════════════
    APERTURA DEL SOBRE
 ════════════════════════════════════════════════════ */
-const envelopeScreen = document.getElementById('envelope-screen');
-const envelopeWrapper = document.getElementById('envelope-wrapper');
-const mainContent     = document.getElementById('main-content');
 
 /* COPILOT CORREGIDO */
 
+const envelopeWrapper = document.getElementById("envelope-wrapper");
+const envelopeScreen = document.getElementById("envelope-screen");
+const mainContent = document.getElementById("main-content");
 
 function openEnvelope() {
 
-  envelopeWrapper.classList.add('open');
+  envelopeWrapper.classList.add("open");
 
-  setTimeout(() =>Content.classList.remove('hidden');  setTimeout(() => {
+  setTimeout(() => {
+    mainContent.classList.remove("hidden");
 
     setTimeout(() => {
-      envelopeScreen.classList.add('fade-out');
+      envelopeScreen.style.opacity = "0";
+      envelopeScreen.style.pointerEvents = "none";
     }, 800);
 
   }, 1200);
 }
 
-/* CLAUDE */
-
-/* function openEnvelope() {
-  // 1. Animar el sobre
-  envelopeWrapper.classList.add('opening');
-
-  // 2. Tras la animación del sobre, mostrar el contenido
-  setTimeout(() => {
-    mainContent.classList.remove('hidden');
-
-    // 3. Pequeña pausa y luego ocultar la pantalla del sobre
-    setTimeout(() => {
-      envelopeScreen.classList.add('fade-out');
-
-      // 4. Una vez invisible, quitar del DOM para no bloquear interacción
-      envelopeScreen.addEventListener(
-        'transitionend',
-        () => envelopeScreen.remove(),
-        { once: true }
-      );
-    }, 400);
-  }, 700);
-} */
-
-envelopeWrapper.addEventListener('click',     openEnvelope);
+envelopeWrapper.addEventListener("click", openEnvelope);
 envelopeWrapper.addEventListener('touchstart', openEnvelope, { passive: true });
 
 

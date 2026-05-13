@@ -139,156 +139,6 @@ a   { text-decoration: none; color: inherit; }
   text-align: center;
 }
 
-
-/* ══════════════════════════════════════════════
-   SOBRE — PANTALLA DE APERTURA - CLAUDE ORIGINAL
-══════════════════════════════════════════════
-#envelope-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
-  background-blend-mode: multiply;
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--cream);
-  transition: opacity 0.7s ease, visibility 0.7s ease;
-  cursor: pointer;
-}
-
-#envelope-screen.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
-#envelope-img {
-  width: min(320px, 85vw);
-  cursor: pointer;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
-}
-
-#envelope-wrapper.opening #envelope-img {
-  transform: scale(1.05) translateY(-20px);
-  opacity: 0;
-}
-
-
-#envelope-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: float 3.5s ease-in-out infinite;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
-}
-
-/* El sobre */
-#envelope {
-  position: relative;
-  width: min(340px, 85vw);
-  aspect-ratio: 3 / 2;
-  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
-  transform-style: preserve-3d;
-  perspective: 1200px;
-  display: none;
-}
-
-/* Cuerpo del sobre */
-#env-body {
-  position: absolute;
-  inset: 0;
-  background: url('../img/sobre-cerrado.png') center/cover no-repeat, #f5ede0;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#env-body::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 55%;
-  background: linear-gradient(135deg, #e8d5bb 25%, transparent 25%) left,
-              linear-gradient(225deg, #e8d5bb 25%, transparent 25%) right;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-  opacity: 0.6;
-} 
-
-/* Solapa superior */
-#env-flap {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 52%;
-  background: url('../img/sobre-solapa.png') center/cover no-repeat, #ecdec9;
-  /* CSS puro si no tienes imagen: triángulo */
-  clip-path: polygon(0 0, 100% 0, 50% 95%);
-  transform-origin: top center;
-  transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2;
-  border-radius: 4px 4px 0 0;
-  border: 1px solid rgba(180,140,90,0.4);
-}
-
-#envelope-wrapper.opening #env-flap {
-  transform: perspective(1200px) rotateX(-180deg);
-}
-
-/* Texto interior del sobre */
-#env-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.env-names {
-  font-family: var(--font-title);
-  font-size: clamp(1.6rem, 5.5vw, 2.4rem);
-  color: var(--red);
-  line-height: 1.1;
-}
-
-.env-date {
-  font-family: var(--font-body);
-  font-size: clamp(0.75rem, 2vw, 0.95rem);
-  letter-spacing: 0.2em;
-  color: var(--dark);
-}
-
-.env-hint {
-  font-family: var(--font-body);
-  font-size: clamp(0.7rem, 1.8vw, 0.85rem);
-  color: var(--dark);
-  opacity: 0.55;
-  margin-top: 0.5rem;
-  letter-spacing: 0.05em;
-  animation: blink 2.2s ease-in-out infinite;
-} */
-
-@keyframes blink {
-  0%, 100% { opacity: 0.35; }
-  50%       { opacity: 0.75; }
-}*/
-
 /* ══════════════════════════════════════════════
    SOBRE — PANTALLA DE APERTURA - COPILOT
 ══════════════════════════════════════════════ */
@@ -300,8 +150,7 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: url('../img/fondo_textura.jpg') repeat;
+  background: url('../img/fondo-textura.jpg') repeat;
 }
 
 /* CONTENEDOR */
@@ -562,22 +411,7 @@ a   { text-decoration: none; color: inherit; }
   gap: 1.5rem;
 }
 
-/* .form-btn-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-form {
-  display: inline-block;
-  background: var(--sage);
-  color: #fff;
-  font-family: var(--font- */
-
-
-form-btn-wrap {
+.form-btn-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
