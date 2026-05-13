@@ -101,12 +101,10 @@ a   { text-decoration: none; color: inherit; }
 
   background-image: url('../img/fondo-textura.jpg'), radial-gradient(circle at center, #f8f5ef, #f2eee7);
   background-blend-mode: multiply;
-  background-size: 100% auto;
-  background-repeat: repeat-y;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
   background-color: var(--cream);
-
-
 }
 
 .section {
