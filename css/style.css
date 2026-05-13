@@ -32,7 +32,7 @@
      'Great Vibes' → 'NewIconScript'
      'Dancing Script' → 'Nickainley'             */
   --font-title: 'Great Vibes', cursive;
-  --font-body:  'Libre Baskerville', serif;
+  --font-body:  'Carattere', serif;
 }
 
 /* ══════════════════════════════════════════════
@@ -44,6 +44,8 @@ body {
   background: var(--cream);
   color: var(--dark);
   font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.8;
   letter-spacing: 0.3px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -188,7 +190,7 @@ body::before {
 
 /* SOBRE */
 #envelope-img {
-  width: min(520px, 92vw);
+  width: min(620px, 96vw);
   position: relative;
   z-index: 2;
   cursor: pointer;
@@ -305,8 +307,8 @@ body::before {
 
 .hero-img {
  
-  width: 90%;
-  height: 85vh;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
   object-position: center 30%;
 }
@@ -432,18 +434,22 @@ body::before {
   }
 }
 
-.bienvenida-layout {
-  display: flex;
+.bienvenida-layout {  
+  
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 60px;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+
 }
 
 .bienvenida-gallery {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-left: -40px;
 }
 
 .bienvenida-gallery img {
@@ -456,6 +462,7 @@ body::before {
 .bienvenida-texto {
   max-width: 600px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .bienvenida-texto h2 {
@@ -467,7 +474,6 @@ body::before {
   font-family: var(--font-body);
   font-size: 1.2rem;
   line-height: 1.8;
-  font-style: italic;
   max-width: 90%;
   margin: 0 auto;
 }
