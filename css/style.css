@@ -77,7 +77,7 @@ a   { text-decoration: none; color: inherit; }
 
 .body-script {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2.8vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
   line-height: 1.85;
   color: var(--dark);
   text-align: center;
