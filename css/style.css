@@ -144,6 +144,27 @@ body::before {
 }
 
 /* ══════════════════════════════════════════════
+   SEPARADOR DE SECCIONES
+══════════════════════════════════════════════ */
+
+.separator {
+  width: 70px;
+  height: 1px;
+  background: linear-gradient(to right,transparent,var(--red),transparent);
+  margin: 40px auto;
+  opacity: 0.6;
+}
+
+.separator::after {
+  content: "❦";
+  display: block;
+  text-align: center;
+  margin-top: -10px;
+  font-size: 14px;
+  color: var(--red);
+}
+
+/* ══════════════════════════════════════════════
    TARJETA SALE DEL SOBRE - COPILOT
 ══════════════════════════════════════════════ */
 
@@ -486,7 +507,7 @@ body::before {
   gap: clamp(15px, 4vw, 40px);
   align-items: center;
   max-width: 1000px;
-  margin: 0 0;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
