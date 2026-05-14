@@ -532,11 +532,11 @@ body::before {
 
 
 #hacienda {
-  padding-top: 10px;
+  margin-top: -30px;
 }
 
 #ceremonia {
-  padding-bottom: 10px;
+  margin-bottom: -30px;
 }
 
 
