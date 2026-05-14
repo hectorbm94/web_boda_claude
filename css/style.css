@@ -534,10 +534,9 @@ body::before {
 
 .bienvenida-texto p {
   font-family: var(--font-body);
-  /*font-size: clamp(1.35rem, 2.3vw, 1.7rem);*/
   line-height: 1.8;
-  max-width: 90%;
-  margin: 0 0;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* ══════════════════════════════════════════════
