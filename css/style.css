@@ -582,11 +582,12 @@ body::before {
 .pin-link:hover { transform: scale(1.1); }
 
 .pin-icon {
-  width: 150px;
+  width: 140px;
   margin-top: 1px;
-  height: 150px;
+  height: 200px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
   transition: transform 0.2s ease;
+  background: red;
 }
 
 .pin-icon:hover {
@@ -619,13 +620,13 @@ body::before {
   background: var(--sage);
   color: white;
   border-radius: 50px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: inline-flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
   height: 60px;
-  width: 450px;
+  width: 370px;
   position: relative;
   overflow: visible;
 }
@@ -637,9 +638,9 @@ body::before {
   transform: translateY(1px);
   position: absolute;   /* 👈 ya no afecta al tamaño del botón */
   right: 20px;          /* posición dentro del botón */
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
-  height: 70px;         /* 👈 ahora puedes hacerla grande */
+  height: 100px;         /* 👈 ahora puedes hacerla grande */
   width: auto;
   pointer-events: none; /* 👈 no bloquea el click */
 }
