@@ -8,9 +8,6 @@ const envelopeWrapper = document.getElementById("envelope-wrapper");
 const envelopeScreen = document.getElementById("envelope-screen");
 const mainContent = document.getElementById("main-content");
 
-
-
-
 function openEnvelope() {
 
   envelopeWrapper.classList.add("open");
@@ -21,9 +18,13 @@ function openEnvelope() {
 
     envelopeScreen.classList.add("fade-out");
 
+    // 🔴 CLAVE: eliminar interacción totalmente
+    setTimeout(() => {
+      envelopeScreen.classList.add("hidden");
+    }, 800);
+
   }, 500);
 }
-
 
 envelopeWrapper.addEventListener("click", openEnvelope);
 envelopeWrapper.addEventListener('touchstart', openEnvelope, { passive: true });
