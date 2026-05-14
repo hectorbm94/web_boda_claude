@@ -568,6 +568,7 @@ body::before {
 /* Pin dorado */
 .pin-link {
   display: inline-block;
+  padding: 10px;
   transform: translateY(-5px);
   align-items: center;
   margin-top: 1px;
@@ -620,13 +621,27 @@ body::before {
   align-items: center;
   gap: 15px;
   justify-content: center;
+  height: 60px;
+  position: relative;
+  overflow: visible;
 }
 
 .pluma-icon {
   height: 100%;
   max-height: 100px;
   width: auto;
-  transform: translateY(1px); 
+  transform: translateY(1px);
+  position: absolute;   /* 👈 ya no afecta al tamaño del botón */
+  right: 20px;          /* posición dentro del botón */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;         /* 👈 ahora puedes hacerla grande */
+  width: auto;
+  pointer-events: none; /* 👈 no bloquea el click */
+}
+
+.btn-form:hover .pluma-icon {
+  transform: translateY(-50%) translateX(3px);
 }
 
 /* ══════════════════════════════════════════════
