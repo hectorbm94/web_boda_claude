@@ -69,9 +69,10 @@ a   { text-decoration: none; color: inherit; }
 .subtitle-script {
   font-family: var(--font-body);
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  color: var(--dark);
+  color: var(--sage-dark);
   font-weight: normal;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   line-height: 1.4;
 }
 
@@ -778,11 +779,11 @@ body::before {
 
 /* TEXTO */
 .cd-label {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-size: 1rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.7;
+  color: var(--gold);
+  opacity: 0.9;
 }
 
 
