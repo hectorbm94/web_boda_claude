@@ -640,6 +640,10 @@ body::before {
   overflow: visible;
 }
 
+.btn-text {
+  padding-right: 30px; /* hueco para la pluma */
+}
+
 .pluma-icon {
   height: 100%;
   max-height: 100px;
@@ -666,7 +670,8 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .gallery-three img {
@@ -762,5 +767,5 @@ body::before {
 }
 
 .countdown-subtext {
-  margin-top: 10px;
+  margin-top: 30px;
 }
