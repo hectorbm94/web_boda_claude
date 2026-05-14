@@ -762,9 +762,5 @@ body::before {
 }
 
 .countdown-subtext {
-  font-size: initial;
   margin-top: 10px;
-  font-family: var(--font-title);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--red);
 }
