@@ -584,7 +584,7 @@ body::before {
 .pin-icon {
   width: 150px;
   margin-top: 1px;
-  height: auto;
+  height: 150px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
   transition: transform 0.2s ease;
 }
@@ -619,13 +619,13 @@ body::before {
   background: var(--sage);
   color: white;
   border-radius: 50px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
   height: 60px;
-  width: 250px;
+  width: 450px;
   position: relative;
   overflow: visible;
 }
