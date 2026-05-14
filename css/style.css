@@ -487,6 +487,9 @@ body::before {
   align-items: center;
   max-width: 1000px;
   margin: 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .bienvenida-gallery {
@@ -528,6 +531,19 @@ body::before {
 #ceremonia .title-script,
 #hacienda .title-script {
   margin-bottom: 2.5rem;
+}
+
+
+@media (max-width: 768px) {
+
+  #ceremonia {
+    padding-bottom: 20px !important;
+  }
+
+  #hacienda {
+    padding-top: 20px !important;
+  }
+
 }
 
 
