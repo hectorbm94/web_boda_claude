@@ -52,6 +52,7 @@ a   { text-decoration: none; color: inherit; }
 
 /* ══════════════════════════════════════════════
    TIPOGRAFÍA — CLASES UTILITARIAS
+   Configuración texto homogéneo
 ══════════════════════════════════════════════ */
 .title-script {
   font-family: var(--font-title);
@@ -67,17 +68,25 @@ a   { text-decoration: none; color: inherit; }
 
 .subtitle-script {
   font-family: var(--font-body);
-  font-size: clamp(2.2rem, 7vw, 4.5rem)
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
   color: var(--dark);
   font-weight: normal;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .subtitle-script.red { color: var(--red); }
 
+
+.body-script,
+.bienvenida-texto p,
+.venue-text p {
+  font-family: inherit;
+}
+
 .body-script {
   font-family: var(--font-body);
-  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   line-height: 1.85;
   color: var(--dark);
   text-align: center;
@@ -102,21 +111,6 @@ body {
   background-repeat: repeat-y;
   background-position: top center;
   font-family: var(--font-body);
-  font-size: clamp(1.35rem, 2.3vw, 1.7rem);
-  line-height: 1.8;
-}
-
-/*Configuración texto homogéneo*/
-
-.body-script,
-.bienvenida-texto p,
-.venue-text p {
-  font-family: inherit;
-}
-
-.body-script {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  line-height: 1.85;
 }
 
 body::before {
@@ -530,7 +524,7 @@ body::before {
 .bienvenida-texto {
   max-width: 650px;
   text-align: center;
-  margin: 0 0;
+  margin: 0 auto;
 }
 
 .bienvenida-texto h2 {
