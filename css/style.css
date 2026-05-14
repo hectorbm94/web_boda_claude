@@ -530,6 +530,16 @@ body::before {
   margin-bottom: 2.5rem;
 }
 
+
+#hacienda {
+  padding-top: 30px;
+}
+
+#ceremonia {
+  padding-bottom: 30px;
+}
+
+
 .venue-layout {
   display: flex;
   align-items: center;
@@ -582,9 +592,9 @@ body::before {
 .pin-link:hover { transform: scale(1.1); }
 
 .pin-icon {
-  width: 70px;
+  width: 56px;
   margin-top: 1px;
-  height: 100px;
+  height: 80px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
   transition: transform 0.2s ease;
 }
