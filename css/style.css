@@ -607,8 +607,8 @@ body::before {
 }
 
 .pluma-icon {
-  width: 20px;
-  height: auto; /*Comentar esto si falla
+  width: 30px;
+  height: auto; /*Comentar esto si falla*/
 }
 
 /* ══════════════════════════════════════════════
@@ -670,7 +670,8 @@ body::before {
   gap: 20px;
   flex-wrap: nowrap;
   margin-top: 30px;*/
-
+  
+  font-size: initial;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -714,6 +715,7 @@ body::before {
 }
 
 .countdown-subtext {
+  font-size: initial;
   margin-top: 10px;
   font-family: var(--font-title);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
