@@ -582,12 +582,11 @@ body::before {
 .pin-link:hover { transform: scale(1.1); }
 
 .pin-icon {
-  width: 140px;
+  width: 70px;
   margin-top: 1px;
-  height: 200px;
+  height: 100px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
   transition: transform 0.2s ease;
-  background: red;
 }
 
 .pin-icon:hover {
